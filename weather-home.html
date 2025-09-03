@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+<section class="container max-w-2xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg text-gray-800">
+
+    <!-- part 1 -->
+    <div class="weather_header mb-6">
+        <form class="weather_search flex items-center gap-3 border-b border-gray-300 py-2">
+            <i class="fa-solid fa-magnifying-glass text-gray-500 text-lg"></i>
+            <input type="text" class="city_name w-full outline-none text-base" placeholder="Search city">
+        </form>
+    </div>
+
+    <!-- part 2  -->
+    <div class="weather_body text-center mb-8">
+        <h1 class="weather_city text-2xl font-semibold mb-1"></h1>
+        <p class="weather_date_time text-sm text-gray-500 mb-4"></p>
+        
+        <div class="weather_data flex justify-center items-center gap-2 mb-3">
+            <p class="weather_forecast text-lg font-medium"></p>
+            <div class="weather_icon"></div>
+        </div>
+        
+        <p class="weather_temperature text-4xl font-bold text-blue-600 mb-3"></p>
+        
+        <div class="weather_minmax flex justify-between text-sm text-gray-600">
+            <p class="weather_min"></p>
+            <p class="weather_max"></p>
+        </div>
+    </div>
+
+    <!-- part 3 -->
+    <section class="weather_info grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <!-- Feels Like -->
+        <div class="weather_card bg-blue-50 p-4 rounded text-center">
+            <i class="fa-solid fa-temperature-half text-blue-500 text-xl mb-1"></i>
+            <div>
+                <p class="text-sm">Feels Like</p>
+                <p class="weather_feelsLike text-lg font-semibold">15&#176;</p>
+            </div>
+        </div>
+
+        <!-- Humidity -->
+        <div class="weather_card bg-blue-50 p-4 rounded text-center">
+            <i class="fa-solid fa-droplet text-blue-500 text-xl mb-1"></i>
+            <div>
+                <p class="text-sm">Humidity</p>
+                <p class="weather_humidity text-lg font-semibold">15&#176;</p>
+            </div>
+        </div>
+
+        <!-- Wind -->
+        <div class="weather_card bg-blue-50 p-4 rounded text-center">
+            <i class="fa-solid fa-wind text-blue-500 text-xl mb-1"></i>
+            <div>
+                <p class="text-sm">Wind</p>
+                <p class="weather_wind text-lg font-semibold">15&#176;</p>
+            </div>
+        </div>
+
+        <!-- Pressure -->
+        <div class="weather_card bg-blue-50 p-4 rounded text-center">
+            <i class="fa-solid fa-gauge-high text-blue-500 text-xl mb-1"></i>
+            <div>
+                <p class="text-sm">Pressure</p>
+                <p class="weather_pressure text-lg font-semibold">15&#176;</p>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
+
+
